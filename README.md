@@ -7,7 +7,7 @@ This repository contains a proof-of-concept for bypassing anti-analysis logic us
 ### 1. The Target: detect_VM_CPUID.c
 A sample C application that mimics malware behavior by querying the CPU for hypervisor signatures (e.g., VMware, VirtualBox) using the 0x40000000 magic leaf. If a VM is detected, the program halts; if not, it executes its payload(in our example it will spawn calc.exe)
 
-![Alt Text](.assets/Vsphere.png)
+![vSphere Anti-VM Detection Proof](./assets/Vsphere.png)
 
 ### 2. Memory patching script: script.js (Frida)
 
