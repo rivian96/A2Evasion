@@ -9,6 +9,9 @@ A sample C application that mimics malware behavior by querying the CPU for hype
 
 ![vSphere Anti-VM Detection Proof](./assets/Vsphere.png)
 
+Validated on VMware vSphere (ESXi), demonstrating the ability to detect data-center-scale virtualization commonly used in corporate environments.
+
+
 ### 2. Memory patching script: script.js (Frida)
 
     Scans process memory for the CPUID instruction (0F A2).
@@ -26,3 +29,6 @@ git clone https://github.com/rivian96/A2Evasion.git
 cd A2Evasion/anti-vm
 ```
 
+```
+frida -l script.js -f detect_VM_CPUID.exe
+```
